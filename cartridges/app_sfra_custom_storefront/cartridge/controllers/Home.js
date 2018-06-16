@@ -18,7 +18,8 @@ server.append('Show', function (req, res, next) {
 	//https://github.com/gargnitin/SFRA_CustomCartridge.git
 	
 	var viewData = res.getViewData();
-	viewData.name = "this is test string from mac"; 
+	viewData.name = "this is test string from custom"; 
+	
 	viewData.feature = "sfra append feature";
 	res.setViewData(viewData);
 	 
