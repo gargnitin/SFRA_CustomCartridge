@@ -23,13 +23,13 @@ server.append('Show', function (req, res, next) {
 	viewData.feature = "sfra append feature";
 	res.setViewData(viewData);
 	 
-	var ree = res;
-	var aa = req;
-	res.render('/home/homePage1',{
+	//var ree = res;
+	//var aa = req;
+	/*res.render('/home/homePage1',{
 		param1: 'Nitin',
 		param2 : 'Garg'
 	});
-   
+   */
 	next();
 });
 
@@ -53,13 +53,19 @@ server.replace('Show', consentTracking.consent, cache.applyDefaultCache, functio
 	 viewData.feature = "sfra append feature";
 	 res.setViewData(viewData);
 	 
-	 res.render('/home/homePage2');
+	 res.render('/home/homePage');
 	 next();
-});*/
-
+});
+*/
 
 server.get('Display', function(req, res, next){
-	 res.render('/home/homePage1');
+	 var EmployeeModel = require('*/cartridge/models/employee');
+	 
+	 var employeeObj = new EmployeeModel();
+	 
+	 res.render('/home/homePage2', {
+		 employee : employeeObj
+	 });
 	 next();
 	
 });

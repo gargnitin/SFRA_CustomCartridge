@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<group formid="customer">
+		<field 
+			formid="firstname" 
+			label="label.input.firstname.profile" 
+			mandatory="true" 
+			max-length="50"
+			missing-error="error.message.required" 
+			range-error="error.message.lessthan50" 
+			type="string" />
+
+		<field 
+			formid="lastname" 
+			label="label.input.lastname.profile" 
+			mandatory="true" 
+			max-length="10" 
+			missing-error="error.message.required"
+			range-error="error.message.lessthan50" 
+			type="string" />
+
+		<field 
+			formid="company" 
+			label="label.input.company.profile" 
+			mandatory="false" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.lessthan50" 
+			type="string" />
+			
+		<field 
+			formid="country" 
+			label="label.input.country.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.lessthan50" 
+			type="string" />
+	</group>
+</form>
