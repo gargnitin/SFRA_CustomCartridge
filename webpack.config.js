@@ -21,7 +21,7 @@ module.exports = [{
     name: 'js',
     entry: createJSPath(),
     output: {
-        path: path.resolve('./cartridges/app_custom_storefront/cartridge/static/default/js/'),
+        path: path.resolve('./cartridges/app_sfra_custom_storefront/cartridge/static/default/js/'),
         filename: '[name].js'
     }
 }];
