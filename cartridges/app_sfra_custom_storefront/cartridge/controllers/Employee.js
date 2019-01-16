@@ -2,10 +2,16 @@
 
 var server = require('server');
 
-server.get('Show', function(req, res, next){
-	 var EmployeeModel = require('*/cartridge/models/employee');
-	 var employeeObj = new EmployeeModel();
+server.get('Show', function(req, res, next){	 
+	 //var AccountModel = require('*/cartridge/models/account');
+	 //var accountModel = new AccountModel(req.currentCustomer);
 	 
+	// var firstName = accountModel.profile.firstName;
+	 //var fullName = accountModel.fullName;
+	 
+	 var EmployeeModel = require('*/cartridge/models/employee');
+	 var employeeObj = new EmployeeModel(req);
+	 	 
 	 var employeeForm = server.forms.getForm('employee');
 	 employeeForm.clear();
 	 employeeForm.customer.firstname.value = employeeObj.employeeDetails.firstName;

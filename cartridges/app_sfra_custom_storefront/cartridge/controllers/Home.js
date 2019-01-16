@@ -8,13 +8,18 @@ var consentTracking = require('*/cartridge/scripts/middleware/consentTracking');
 var page = module.superModule;
 server.extend(page);
 
+/*server.get('Show', function (req, res, next) {
+    res.render('/home/homePage');
+    next();
+});*/
+
 
 server.append('Show', function (req, res, next) {
 	//server.middleware.https();
 	//server.middleware.http();
 	//userLoggedIn.validateLoggedIn();
 	//session.custom.name = 'nitin garg';
-	//var aaa = request;
+	var aaa = request;
 	//https://github.com/gargnitin/SFRA_CustomCartridge.git
 	
 	var viewData = res.getViewData();

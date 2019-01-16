@@ -1,0 +1,34 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/customer.js');
+    </isscript>
+	
+	Customer Profile
+	
+	<form action="${URLUtils.url('CustomerProfile-Save')}" class="customer" method="POST" name=${pdict.CustomerProfileForm.htmlName}>
+	
+		<div class="form-group
+	      <isif condition="${pdict.CustomerProfileForm.customer.firstname.mandatory === true}">required</isif>">
+	      <label class="form-control-label" for="firstName">
+	          <isprint value="${pdict.CustomerProfileForm.customer.firstname.label}" encoding="htmlcontent" />
+	      </label>
+	      <input type="text" class="form-control" id="firstName"
+	          <isprint value="${pdict.CustomerProfileForm.customer.firstname.attributes}" encoding="off" />>
+	      <div class="invalid-feedback"></div>
+	   </div>
+	
+	
+
+	   
+		    <div class="row">
+	        <div class="col">
+	            <a href="${URLUtils.url('CustomerProfile-Show')}" class="btn btn-block btn-outline-primary">${Resource.msg('button.cancel','account',null)}</a>
+	        </div>
+	
+	        <div class="col">
+	            <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+	        </div>
+	    </div>
+  	</form>
+</isdecorate>
